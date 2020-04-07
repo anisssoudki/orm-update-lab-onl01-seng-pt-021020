@@ -19,7 +19,7 @@ attr_accessor :id, :name, :grade
     name text,
     grade integer
     
-    )
+    );
     
     SQL
   end
