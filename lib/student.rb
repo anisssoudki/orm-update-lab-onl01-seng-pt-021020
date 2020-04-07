@@ -20,8 +20,9 @@ attr_accessor :id, :name, :grade
     grade integer
     
     );
-    
     SQL
+    
+    DB[:conn].execuet(sql)
   end
   
   def self.drop_table
