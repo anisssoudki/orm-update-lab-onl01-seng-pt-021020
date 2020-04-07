@@ -27,7 +27,7 @@ attr_accessor  :name, :grade, :id
   
   def self.drop_table(arg)
     sql = <<-SQL
-    DROP TABLE ?,;
+    DROP TABLE ?;
     SQL
     DB[:conn].execute(sql, arg)
   end
