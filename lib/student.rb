@@ -59,7 +59,9 @@ attr_accessor  :name, :grade, :id
     end
     
     def self.find_by_name
-      
+      sql = "select * from students where name = ?"
+      output = DB[:conn].execute(sql, name)[0]
+      self.new_from_db(output)
     end
     
     def update
