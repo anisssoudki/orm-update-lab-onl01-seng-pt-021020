@@ -32,8 +32,19 @@ attr_accessor  :name, :grade, :id
     DB[:conn].execute(sql)
   end
   
-  def save
   
+  def save
+  if self.id
+    self.update
+  else
+    sql = <<-SQL
+      INSERT INTO songs (name, album)
+      VALUES (?, ?)
+    SQL
+    DB[:conn].execute(sql, self.name, self.album)
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
+  end
+end
   end
   
   def self.create
