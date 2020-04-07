@@ -25,11 +25,11 @@ attr_accessor  :name, :grade, :id
     DB[:conn].execute(sql)
   end
   
-  def self.drop_table(arg)
+  def self.drop_table
     sql = <<-SQL
     DROP TABLE ?;
     SQL
-    DB[:conn].execute(sql, arg)
+    DB[:conn].execute(sql)
   end
   
   def save
