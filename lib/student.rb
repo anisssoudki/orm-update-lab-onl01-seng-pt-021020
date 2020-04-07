@@ -38,7 +38,7 @@ attr_accessor  :name, :grade, :id
   end
     
     def self.new_from_db
-      output = self.new(row[0],row[1],row[2])
+      output = self.new(row[1],row[2],row[0])
     end
     
     def self.find_by_name
