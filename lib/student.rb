@@ -22,7 +22,7 @@ attr_accessor  :name, :grade, :id
     );
     SQL
     
-    DB[:conn].execuet(sql)
+    DB[:conn].execute(sql)
   end
   
   def self.drop_table
