@@ -35,7 +35,7 @@ attr_accessor  :name, :grade, :id
   
   def save
     if self.id
-      self.update
+      update
     else
       sql = <<-SQL
         INSERT INTO students (name, grade)
