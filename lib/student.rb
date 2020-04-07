@@ -14,7 +14,7 @@ attr_accessor  :name, :grade, :id
   
   def self.create_table
     sql = <<-SQL
-    CREATE TABLE IF NOT EXIST students (
+    CREATE TABLE IF NOT EXISTS students (
     id integer primary key,
     name text,
     grade integer
